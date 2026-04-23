@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Earn Together</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <style></style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+
+        <div id="admin-login-form">
+            <input type="text" id="admin-username" placeholder="Admin Username">
+            <input type="password" id="admin-password" placeholder="Admin Password">
+            <button id="admin-login-btn">Login</button>
+        </div>
+
+        <div id="admin-logout" style="display:none;">
+            <button id="logout-btn">Logout</button>
+        </div>
+
+        <div id="admin-dashboard" style="display:none;">
+            <h2>Platform Stats</h2>
+            <p>Total Users: <span id="total-users"></span></p>
+            <p>Total Deposits: $<span id="total-deposits"></span></p>
+            <p>Total Withdrawals: $<span id="total-withdrawals"></span></p>
+            <p>Total Commissions: $<span id="total-commissions"></span></p>
+
+            <h2>Pending Withdrawals</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Amount</th>
+                        <th>Reference</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="pending-table"></tbody>
+            </table>
+
+            <h2>All Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Balance</th>
+                        <th>Referral Code</th>
+                        <th>Invited By</th>
+                    </tr>
+                </thead>
+                <tbody id="users-table"></tbody>
+            </table>
+
+            <h2>All Transactions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Reference</th>
+                        <th>Related User</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="transactions-table"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
+
+
+
+
+

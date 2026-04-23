@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earn Together</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* ====== GLOBAL ====== */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: url("images/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* ====== LAYOUT ====== */
+.wrapper {
+  display: flex;
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar {
+  width: 150px;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  position: fixed;
+}
+
+.sidebar h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: #007bff;
+}
+
+/* ====== MAIN ====== */
+.main {
+  margin-left: 220px;
+  width: 100%;
+}
+
+/* ====== HEADER ====== */
+.header {
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ====== CONTENT ====== */
+.content {
+  padding: 20px;
+}
+
+/* ====== CARDS GRID ====== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 20px;
+}
+
+/* ====== CARD ====== */
+.card {
+  background: rgba(0,0,0,0.6);
+  padding: 50px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* ====== BUTTON ====== */
+button {
+  width: 30%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background: #007bff;
+  gap: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* ====== INPUT ====== */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* ====== TABLE ====== */
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+</style>
+</head>
+
+<body>
+
+
+    
+<!-- Logo -->
+<div class="logo">
+  <img src="images/logo.png" alt="logo">
+</div>
+
+<div class="wrapper">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Earn Together</h2>
+
+   <div class="sidebar">
+    <h2>Earn Together</h2>
+    <a href="index.html">logout</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="deposit.html">Deposit</a>
+    <a href="withdraw.html">Withdraw</a>
+    <a href="transactions.html">Transactions</a>
+    <a href="referrals.html">Referrals</a>
+  </div>  </div>
+
+  
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+<!-- Header -->
+ 
+<header>
+  <h2>Earn Together Dashboard</h2>
+  <button onclick="location.href='index.html'">Logout</button>
+</header>
+
+<!-- Main Container -->
+<div class="container">
+
+  &emsp;&emsp;&emsp;<div class="card">
+    <h3>Your Account</h3>
+    <p><b>Balance:</b> ₦<span id="balance">0</span></p>
+    <br><br><br>  
+    &emsp;&emsp;&emsp;&emsp;<button onclick="location.href='deposit.html'"><h3>Deposit</h3></button>
+       &emsp;&emsp;&emsp;&emsp;&emsp;
+             
+          <button onclick="location.href='withdraw.html'"><h3>Withdraw</h3></button>
+     
+</div>
+
+  
+ <div class="card">
+    <p><b>Your Referral Code:</b> <span id="referral-code"></span></p>       
+               <input id="referral-link" readonly>
+    <button onclick="copyReferral()">Copy Referral Link</button>
+
+       
+        </div>
+
+
+  <div class="card">
+    <h3>Daily Profit</h3>
+    <button id="profit-btn">Claim Daily Profit</button>    
+  </div>
+
+  
+
+  <div class="card">
+          <h3>
+          &emsp;&emsp;<button onclick="location.href='transactions.html'"><h3>Transactions History</h3></button>
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+          <button onclick="location.href='referrals.html'"><h3>Referral Leader Loard</h3></button>
+        </h3>
+        </div>
+
+<!-- Background circles -->
+<span class="circle1"></span>
+<span class="circle2"></span>
+<span class="circle3"></span>
+
+<!-- Auth check -->
+<script>
+if (!localStorage.getItem("username")) {
+  window.location.href = "index.html";
+}
+</script>
+
+
+  </div> <!-- end main -->
+</div> <!-- end wrapper -->
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
+

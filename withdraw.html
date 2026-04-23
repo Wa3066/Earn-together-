@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Withdraw</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="sidebar">
+  <h2>Earn Together</h2>
+  <a href="dashboard.html">Dashboard</a>
+</div>
+
+<div class="main">
+
+<div class="header">
+  <h2>Withdraw</h2>
+</div>
+
+<div class="content">
+
+ <div class="card">
+    <h3>Withdrawal Account</h3>
+    <input id="bank-name" placeholder="Bank Name">
+    <input id="account-number" placeholder="Account Number">
+    <input id="account-name" placeholder="Account Name">
+    <button id="wallet-btn">Save Bank Details</button>
+  </div>
+
+  <div class="card">
+    <h3>Withdraw</h3>
+    <input id="withdraw-amount" placeholder="Enter withdraw amount">
+    <button id="withdraw-btn" onclick="withdraw()">Request Withdraw</button>
+  </div>
+
+</div>
+</div>
+</div>
+
+<script src="js/withdraw.js"></script>
+
+</body>
+</html>
